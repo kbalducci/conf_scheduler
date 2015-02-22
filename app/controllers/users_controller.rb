@@ -1,20 +1,30 @@
 class UsersController < ApplicationController
-    protect_from_forgery with: :exception
+  protect_from_forgery with: :exception
   before_action :authenticate_user!
 
-def create
-  @user = User.new(user_params)
+  def index
+    @users = User.all
+    # user = User.new(user_params)
+    user = User.first
+  end
 
-  respond_to do |format|
-    if @user.save
-      format.html { redirect_to @user, notice: 'User was successfully created.' }
-      format.json { render json: @user, status: :created, location: @user }
-    else
-      format.html { render "welcome/index" }
-      format.json { render json: @user.errors, status: :unprocessable_entity }
+  def show
+    @user = User.find(params[:id])
+  end
+
+  def create
+    @user = User.new(user_params)
+
+    respond_to do |format|
+      if @user.save
+        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.json { render json: @user, status: :created, location: @user }
+      else
+        format.html { render "welcome/index" }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
     end
-  end
-  end
+    end
 
     private
     def user_params
