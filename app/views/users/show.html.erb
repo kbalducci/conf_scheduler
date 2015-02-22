@@ -5,3 +5,11 @@
   <%= @user.dob %>
   <%= @user.fav_color %>
 
+  <h1><%= @user.full_name %> has scheduled the following meetings: </h1>
+    <% @user.meetings.each do |meeting| %>
+      <%= meeting.title %>
+      <%= meeting.start_time %>
+      <%= meeting.end_time %>
+    <% end %>
+
+
