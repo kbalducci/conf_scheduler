@@ -5,3 +5,9 @@
   <%= @room.description %>
   <%= @room.photo %>
 
+  <% @room.meetings.each do |meeting| %>
+    <%= meeting.title %>
+    <%= meeting.start_time %>
+    <%= meeting.end_time %>
+  <% end %>
+
