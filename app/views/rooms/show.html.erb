@@ -3,7 +3,7 @@
   <%= @room.room_name %>
   <%= @room.location %>
   <%= @room.description %>
-  <%= @room.photo %>
+  <%= image_tag @room.photo.url(:medium) %>
 
   <% @room.meetings.each do |meeting| %>
     <%= meeting.title %>
