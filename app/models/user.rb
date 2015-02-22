@@ -5,4 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :meetings
   validates_presence_of :first_name, :last_name
+
+
 end

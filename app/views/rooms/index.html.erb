@@ -1,1 +1,10 @@
 <h1> conference rooms index </h1>
+<h3> Here are our wonderful conference rooms that are available for your meetings!</h3>
+
+<% @rooms.each do |room| %>
+  <%= room.photo %>
+  <%= room.name %>
+  <%= room.location %>
+  <%= room.description %>
+<% end %>
+
