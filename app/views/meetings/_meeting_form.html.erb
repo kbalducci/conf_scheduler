@@ -1,0 +1,17 @@
+<div class="container"
+<h1>Partial for meetings</h1>
+<%= simple_form_for([current_user, Meeting.new], multipart: true) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.datetime_select :start_time%>
+    <%= f.datetime_select :end_time%>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+
+<% end %>
+</div>

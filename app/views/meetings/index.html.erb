@@ -1,0 +1,7 @@
+<h1>Meeting Index </h1>
+<p><%= render 'meeting_form' %></p>
+<% @meetings.each do |meeting| %>
+  <%= meeting.name %>
+  <%= meeting.start_time %>
+  <%= meeting.end_time %>
+<% end %>
