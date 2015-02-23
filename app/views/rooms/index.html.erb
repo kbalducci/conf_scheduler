@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-4">
     <div class="well well-lg">
-      <h3 style="text-align: center">Schedule a Meeting</h3>
+      <h3 style="text-align: center">Schedule a Conference</h3>
     </div>
   <%= render 'room_form' %>
   </div>
@@ -13,13 +13,15 @@
     </div>
       <% @rooms.each do |room| %>
       <ul>
+        <li><%= room.room_name %></li>
         <li><%= image_tag room.photo.url(:medium) %></li>
-        <li>Name<%= room.room_name %></li>
         <li>Location<%= room.location %></li>
         <li>Description<%= room.description %></li>
       </ul>
       <hr />
           <% end %>
+      <%= paginate @rooms %><br />
+      <%= page_entries_info @rooms %>
   </div>
   <div class="col-md-1">
   </div>

@@ -4,7 +4,7 @@ class RoomsController < ApplicationController
   def index
     user = current_user
     @users = User.all
-    @rooms = Room.all
+    @rooms = Room.all.page params[:page]
     @room = Room.new
   end
 

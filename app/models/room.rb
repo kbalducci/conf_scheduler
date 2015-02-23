@@ -1,6 +1,7 @@
 class Room < ActiveRecord::Base
   has_many :meetings
   validates_presence_of :room_name, :location
+  paginates_per 5
 
   has_attached_file :photo,
   :styles => { :medium => "300x300>", :thumb => "100x100>" },
