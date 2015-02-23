@@ -1,4 +1,4 @@
-<div class="container"
+
 <h1>Partial for meetings</h1>
 <%= simple_form_for([current_user, Meeting.new]) do |f| %>
   <%= f.error_notification %>
@@ -13,10 +13,11 @@
     <p>End Time</p>
     <%= f.datetime_select :end_time%>
   </div>
+  <br />
 
   <div class="form-actions">
     <%= f.button :submit %>
   </div>
 
 <% end %>
-</div>
+
