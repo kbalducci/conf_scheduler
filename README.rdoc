@@ -1,28 +1,25 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to my conference scheduler app. You can visit the live site at: https://tiy-conf-scheduler.herokuapp.com/.
+With this app you can sign up to become a user. Once signed in you can view the conference rooms available and schedule meetings in various rooms.
 
-Things you may want to cover:
+Things to know:
 
-* Ruby version
+* Ruby version - 2.2.0
 
-* System dependencies
+What's working:
+* Able to create users, have users sign up and sign in
+* Can create meetings
+* Can create rooms
+* Room data is loaded
+* AWS & Paperclip were used for file uploading
+* Kaminari gem used for pagination
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Still working on:
+* More testing
+* Associating meetings with users and rooms and displaying who created which meeting or on the user's page where the room is.
+* Authorization
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+
