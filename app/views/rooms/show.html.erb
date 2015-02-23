@@ -1,9 +1,9 @@
 <h1>Conference room show page</h1>
-
-  <%= @room.room_name %>
-  <%= @room.location %>
-  <%= @room.description %>
-  <%= image_tag @room.photo.url(:medium) %>
+<ul>
+  <li><%= @room.room_name %></li>
+  <li>Location: <%= @room.location %></li>
+  <li><%= @room.description %></li>
+  <li><%= image_tag @room.photo.url(:medium) %></li>
 
   <% @room.meetings.each do |meeting| %>
     <%= meeting.title %>
