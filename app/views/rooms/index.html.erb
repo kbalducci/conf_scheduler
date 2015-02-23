@@ -13,7 +13,7 @@
     </div>
       <% @rooms.each do |room| %>
       <ul>
-        <li><%= image_tag @room.photo.url(:medium) %></li>
+        <li><%= image_tag room.photo.url(:medium) %></li>
         <li>Name<%= room.room_name %></li>
         <li>Location<%= room.location %></li>
         <li>Description<%= room.description %></li>
