@@ -21,9 +21,10 @@
     </tr>
   </thead>
   <tbody>
+  <% @meetings.each do |meeting| %>
     <tr>
-      <% @meetings.each do |meeting| %>
-      <td><%= meeting.name %></td>
+
+      <td><%= meeting.title %></td>
       <td><%= meeting.start_time %></td>
       <td><%= meeting.end_time %></td>
       <% end %>

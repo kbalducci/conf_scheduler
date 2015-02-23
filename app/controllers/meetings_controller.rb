@@ -15,7 +15,7 @@ class MeetingsController < ApplicationController
     @meeting.user_id = user.id
     respond_to do |format|
       if @meeting.save
-        format.html { redirect_to users_path, notice: 'Meeting was successfully created.' }
+        format.html { redirect_to user_meetings_path, notice: 'Meeting was successfully created.' }
         format.json { render :show, status: :created, location: @meeting }
 
       else
