@@ -1,27 +1,29 @@
-  <div class="row">
-    <div class="col-md-4">
-      <div class="well well-lg">
-        <h3 style="text-align: center">Schedule a Meeting</h3>
-      </div>
-    <%= render 'room_form' %>
+<div class="row">
+  <div class="col-md-4">
+    <div class="well well-lg">
+      <h3 style="text-align: center">Schedule a Meeting</h3>
     </div>
-    <div class="col-md-1">
+  <%= render 'room_form' %>
+  </div>
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-6">
+    <div class="well well-lg">
+      <h2 style="text-align: center">Our Conference Rooms</h2>
     </div>
-    <div class="col-md-6">
-      <div class="well well-lg">
-        <h2 style="text-align: center">Our Conference Rooms</h2>
-      </div>
       <% @rooms.each do |room| %>
       <ul>
         <li><%= image_tag @room.photo.url(:medium) %></li>
         <li>Name<%= room.room_name %></li>
         <li>Location<%= room.location %></li>
         <li>Description<%= room.description %></li>
-      <% end %>
       </ul>
-    </div>
-    <div class="col-md-1">
-    </div>
+      <hr />
+          <% end %>
   </div>
+  <div class="col-md-1">
+  </div>
+</div>
+
 
 
