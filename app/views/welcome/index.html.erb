@@ -1,20 +1,28 @@
-<h1>Welcome Index</h1>
+<div class="row">
+  <div class="col-md-2">
+  </div>
+  <div class="col-md-8">
+    <h1>Schedule Your Conference Room Today!</h1>
 
-<p>Welcome to The Iron Yard's conference scheduler app! Here at The Iron Yard we have 8 beautiful rooms available for our users to reserve for their conferences and meetings. In order to reserve a conference room and schedule a meeting you need to have an account and be signed in, so if you don't already have an account, sign up now!</p>
+    <p>Welcome to The Iron Yard's conference scheduler app! Here at The Iron Yard we have 8 beautiful rooms available for our users to reserve for their conferences and meetings. In order to reserve a conference room and schedule a meeting you need to have an account and be signed in, so if you don't already have an account, sign up now!</p>
 
-<% if user_signed_in? %>
-  <div class="alert alert-dismissible alert-success">
-  <%= link_to('Logout', destroy_user_session_path(@current_user), :method => :delete, class: "btn btn-primary btn-lg" ) %>
-  <%= link_to('Users', users_path, class: "btn btn-primary btn-lg") %>
-  <%= link_to('Schedule a Conference Room', )
+    <% if user_signed_in? %>
+      <div class="alert alert-dismissible alert-success">
+      <%= link_to('Logout', destroy_user_session_path(@current_user), :method => :delete, class: "btn btn-primary btn-lg" ) %>
+      <%= link_to('Users', users_path, class: "btn btn-primary btn-lg") %>
+      <%= link_to('Conference Rooms',rooms_path, class: "btn btn-primary btn-lg") %>
+      </div>
+    <% else %>
+      <div class="alert alert-dismissible alert-warning">
+        <h4>Please Sign In or Sign Up to access the site!</h4>
+      </div>
+      <div class="alert alert-dismissible alert-danger">
+        <%= link_to('Sign Up Now', new_user_registration_path, class: "btn btn-primary btn-lg")%>
+        <%= link_to('Sign In Now', new_user_session_path, class: "btn btn-primary btn-lg")%>
+      </div>
+    <% end %>
   </div>
-<% else %>
-  <div class="alert alert-dismissible alert-warning">
-    <h4>Please Sign In or Sign Up to access the site!</h4>
+  <div class="col-md-2">
   </div>
-  <div class="alert alert-dismissible alert-danger">
-    <%= link_to('Sign Up Now', new_user_registration_path, class: "btn btn-primary btn-lg")%>
-    <%= link_to('Sign In Now', new_user_session_path, class: "btn btn-primary btn-lg")%>
-  </div>
-<% end %>
+</div>
 

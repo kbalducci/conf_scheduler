@@ -3,7 +3,16 @@
 
   <div class="form-inputs">
     <%= f.input :title %>
-    <%= f.input :room_id %>
+    <%= f.select :room_id,
+      [['Building C - Ruby on Rails Classroom', 1],
+      ['Building C - Web Design Classroom', 1],
+      ['Building C - Main Co-Working Space', 1],
+      ['Building C - Dining Room', 1],
+      ['Building K - Blue Room', 1],
+      ['Building K - Javascript Classroom (Yellow Room)', 1],
+      ['Building K - Fish Room', 1],
+      ['Building K - Dining Room', 1]]
+       %>
     <p>Start Time</p>
     <%= f.datetime_select :start_time, label: "Start Time"%>
     <br />

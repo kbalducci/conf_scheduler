@@ -3,10 +3,10 @@ class MeetingsController < ApplicationController
 
   def index
     @meetings = Meeting.all
-    # user = User.new(user_params)
     user = User.find(params[:user_id])
-    # @user = User.first
     @users = User.all
+    meetings = Meeting.all
+    @room = Room.all
   end
 
   def create
