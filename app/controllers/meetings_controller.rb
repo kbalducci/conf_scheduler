@@ -17,9 +17,8 @@ class MeetingsController < ApplicationController
         NotificationMailer.new_meeting(@meeting).deliver
         format.html { redirect_to user_meetings_path, notice: 'Meeting was successfully created.' }
         format.json { render :show, status: :created, location: @meeting }
-
       else
-        format.html { render :new }
+        format.html { redirect_to root_path, notice: "Something went wrong" }
         format.json { render json: @meeting.errors, status: :unprocessable_entity }
       end
     end

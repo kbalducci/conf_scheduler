@@ -16,7 +16,6 @@
   <thead>
     <tr>
       <th>Meeting</th>
-<!--       <th>Location</th> -->
       <th>Start Time</th>
       <th>End Time</th>
       <th>Scheduled by</th>
@@ -30,7 +29,7 @@
       <td><%= meeting.start_time %></td>
       <td><%= meeting.end_time %></td>
       <td><%= meeting.user.full_name %></td>
-      <td><%= meeting.room.location %></td>
+      <td><%= "meeting.room_location" %></td>
       <% end %>
     </tr>
   </tbody>

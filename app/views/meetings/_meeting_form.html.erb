@@ -5,14 +5,13 @@
     <%= f.input :title %>
     <%= f.select :room_id,
       [['Building C - Ruby on Rails Classroom', 1],
-      ['Building C - Web Design Classroom', 1],
-      ['Building C - Main Co-Working Space', 1],
-      ['Building C - Dining Room', 1],
-      ['Building K - Blue Room', 1],
-      ['Building K - Javascript Classroom (Yellow Room)', 1],
-      ['Building K - Fish Room', 1],
-      ['Building K - Dining Room', 1]]
-       %>
+      ['Building C - Web Design Classroom', 2],
+      ['Building C - Main Co-Working Space', 3],
+      ['Building C - Dining Room', 4],
+      ['Building K - Blue Room', 5],
+      ['Building K - Javascript Classroom (Yellow Room)', 6],
+      ['Building K - Fish Room', 7],
+      ['Building K - Dining Room', 8]], { include_blank: "Please Select" } %>
     <p>Start Time</p>
     <%= f.datetime_select :start_time, label: "Start Time"%>
     <br />
