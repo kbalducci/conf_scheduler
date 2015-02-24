@@ -15,6 +15,7 @@ class MeetingsController < ApplicationController
     @meeting.user_id = user.id
     respond_to do |format|
       if @meeting.save
+        NotificationMailer.new_meeting(@meeting).deliver
         format.html { redirect_to user_meetings_path, notice: 'Meeting was successfully created.' }
         format.json { render :show, status: :created, location: @meeting }
 
