@@ -1,2 +1,7 @@
-<h1>Hello <%= @meeting.user_author_email %>!</h1>
-<p> You have created a new meeting. <%= @meeting.user.title, post_url(@meeting.user, host: 'http://localhost:3000') %></p>
+<h1>Hello <%= @meeting.user.email %>!</h1>
+<p> You have created a new meeting: </p>
+  <ul>
+    <li><%= @meeting.user.title %></li>
+    <li><%= @meeting.user.start_time %></li>
+    <li><%= @meeting.user.end_time %></li>
+  </ul>

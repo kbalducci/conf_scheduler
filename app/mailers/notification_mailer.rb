@@ -30,6 +30,6 @@ class NotificationMailer < ApplicationMailer
   def new_meeting(meeting)
     @meeting = meeting
 
-    mail to: comment.meeting_author_email, subject: 'New Comment On Post'
+    mail to: meeting.user.email, subject: 'New Meeting Created'
   end
 end
