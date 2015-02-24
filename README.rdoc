@@ -14,6 +14,7 @@ What's working:
 * Room data is loaded
 * AWS & Paperclip were used for file uploading
 * Kaminari gem used for pagination
+* Mailing with Mandrill - automated email to user once user schedules a meeting
 
 Still working on:
 * More testing
