@@ -1,14 +1,8 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4">
-      <div class="well well-lg">
-        <h3 style="text-align: center">Schedule a Meeting</h3>
-      </div>
-    <%= render 'meeting_form' %>
+    <div class="col-md-3">
     </div>
-    <div class="col-md-1">
-    </div>
-    <div class="col-md-7">
+    <div class="col-md-6">
       <div class="well well-lg">
         <h2 style="text-align: center">Scheduled Meetings  </h2>
       </div>
@@ -30,11 +24,13 @@
       <td><%= meeting.end_time %></td>
       <td><%= meeting.user.full_name %></td>
       <td><%= meeting.room.location %></td>
-      <td><%= link_to('Leave a Comment', new_comment_path, class: "btn btn-primary") %></td>
+      <td><%= link_to('Leave a Comment', new_comment_path, class: "btn btn-primary btn-lg") %></td>
       <% end %>
     </tr>
   </tbody>
 </table>
 
+    <div class="col-md-3">
+    </div>
   </div>
 </div>

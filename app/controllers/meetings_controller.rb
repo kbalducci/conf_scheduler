@@ -8,6 +8,13 @@ class MeetingsController < ApplicationController
     @room = Room.all
   end
 
+  def show
+    @meetings = Meeting.all
+    user = User.find(params[:user_id])
+    @users = User.all
+    @room = Room.all
+  end
+
   def create
     @meeting = Meeting.new(meeting_params)
     user = current_user
