@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :meetings
+  has_many :comments
   validates_presence_of :first_name, :last_name
 
   def full_name

@@ -11,17 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150221023031) do
+ActiveRecord::Schema.define(version: 20150225045010) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "message"
+    t.integer  "user_id", null: false
+    t.integer  "meeting_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comments", ["meeting_id"], name: "index_comments_on_meeting_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "meetings", force: :cascade do |t|
     t.string   "title"
     t.datetime "start_time"
     t.datetime "end_time"
-    t.integer  "user_id"
-    t.integer  "room_id"
+    t.integer  "user_id", null: false
+    t.integer  "room_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -63,6 +74,8 @@ ActiveRecord::Schema.define(version: 20150221023031) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "comments", "meetings"
+  add_foreign_key "comments", "users"
   add_foreign_key "meetings", "rooms"
   add_foreign_key "meetings", "users"
 end
