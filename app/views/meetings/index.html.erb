@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-3">
       <div class="well well-lg">
         <h3 style="text-align: center">Schedule a Meeting</h3>
       </div>
@@ -8,11 +8,11 @@
     </div>
     <div class="col-md-1">
     </div>
-    <div class="col-md-7">
+    <div class="col-md-8">
       <div class="well well-lg">
         <h2 style="text-align: center">Scheduled Meetings  </h2>
       </div>
-<table class="table table-striped table-hover ">
+<table id='meetings-table' class='table table-striped'>
   <thead>
     <tr>
       <th>Meeting</th>
@@ -20,6 +20,7 @@
       <th>End Time</th>
       <th>Scheduled by</th>
       <th>Location</th>
+      <th>Comment</th>
     </tr>
   </thead>
   <tbody>
@@ -31,8 +32,8 @@
       <td><%= meeting.user.full_name %></td>
       <td><%= meeting.room.location %></td>
       <td><%= link_to('Leave a Comment', new_comment_path, class: "btn btn-primary") %></td>
-      <% end %>
     </tr>
+  <% end %>
   </tbody>
 </table>
 
