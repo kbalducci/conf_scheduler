@@ -1,13 +1,32 @@
 <h1>Conference room show page</h1>
 <ul>
-  <li><%= @room.room_name %></li>
-  <li>Location: <%= @room.location %></li>
-  <li><%= @room.description %></li>
-  <li><%= image_tag @room.photo.url(:medium) %></li>
+  <li class="room-info"><%= @room.room_name %></li>
+  <li class="room-info">Location: <%= @room.location %></li>
+  <li class="room-info"><%= @room.description %></li>
+  <li class="room-info"><%= image_tag @room.photo.url(:medium) %></li>
+</ul>
+<hr />
 
+<h1>Meetings Scheduled for <%= @room.room_name %></h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+      <th>Scheduler</th>
+    </tr>
+  </thead>
+
+  <tbody>
   <% @room.meetings.each do |meeting| %>
-    <%= meeting.title %>
-    <%= meeting.start_time %>
-    <%= meeting.end_time %>
+    <tr>
+      <td><%= meeting.title %></td>
+      <td><%= meeting.start_time %></td>
+      <td><%= meeting.end_time %></td>
+      <td><%= meeting.user.full_name %></td>
+    </tr>
   <% end %>
+  </tbody>
+</table>
 
