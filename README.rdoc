@@ -16,12 +16,15 @@ What's working:
 * Kaminari gem used for pagination
 * Mailing with Mandrill - automated email to user once user schedules a meeting
 * Comments on meetings
-* Meetins now associated with a room_id
+* Meetings now associated with a room_id
+* Implemented DataTable with js for display of meetings
+
+
 
 Still working on:
 * More testing
-* Displaying who created which meeting or on the user's page where the room is.
 * Authorization
+* Updating time output with js
 
 
 
