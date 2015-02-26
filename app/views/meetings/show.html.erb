@@ -2,9 +2,9 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-2">
     </div>
-    <div class="col-md-6">
+    <div class="col-md-8">
       <div class="well well-lg">
         <h2 style="text-align: center">Scheduled Meetings  </h2>
       </div>
@@ -27,13 +27,13 @@
       <td><%= meeting.end_time %></td>
       <td><%= meeting.user.full_name %></td>
       <td><%= meeting.room.location %></td>
-      <td>Hi</td>
+      <td><%= link_to('Leave a Comment', new_comment_path, class: "btn btn-primary btn-lg") %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
 
-    <div class="col-md-3">
+    <div class="col-md-2">
     </div>
   </div>
 </div>
