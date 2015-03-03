@@ -4,9 +4,14 @@
     //= require turbolinks
     //= require_tree .
 
-var ready = function () {
 
-};
+    var ready = function () {
+        timeFormatter();
+        $('#meetings-table').DataTable();
+        timeFormatter();
+        $('#comments-table').DataTable();
+    };
 
-$(document).ready(ready);
-$(document).on('page:load', ready);
+
+    $(document).ready(ready);
+    $(document).on('page:load', ready);

@@ -27,8 +27,8 @@
   <% @meetings.each do |meeting| %>
     <tr>
       <td><%= meeting.title %></td>
-      <td><%= meeting.start_time %></td>
-      <td><%= meeting.end_time %></td>
+      <td><time><%= meeting.start_time %></time></td>
+      <td><time><%= meeting.end_time %></time></td>
       <td><%= meeting.user.full_name %></td>
       <td><%= meeting.room.location %></td>
       <td><%= meeting.room.room_name %></td>
