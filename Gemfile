@@ -47,7 +47,7 @@ end
 gem 'hirb'
 gem 'kaminari'
 gem 'puma'
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 gem 'figaro'
 gem 'devise'
 gem 'cancancan', '~> 1.10'
@@ -62,6 +62,10 @@ group :test, :development do
   gem 'simplecov'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'poltergeist'
 end
 
 gem 'bootstrap-sass'
