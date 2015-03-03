@@ -31,6 +31,7 @@
       <td><%= meeting.end_time %></td>
       <td><%= meeting.user.full_name %></td>
       <td><%= meeting.room.location %></td>
+      <td><%= meeting.room.room_name %></td>
       <td><%= link_to('Leave a Comment', new_comment_path, class: "btn btn-primary") %></td>
     </tr>
   <% end %>
