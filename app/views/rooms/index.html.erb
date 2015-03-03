@@ -13,7 +13,7 @@
     </div>
       <% @rooms.each do |room| %>
       <ul>
-        <li class="room-info"><%= link_to room.room_name, room_path(room) %><%= room.room_name %></li>
+        <li class="room-info"><%= link_to room.room_name, room_path(room) %></li>
         <li class="room-info"><%= image_tag room.photo.url(:medium) %></li>
         <li class="room-info">Location: <%= room.location %></li>
         <li class="room-info">Description: <%= room.description %></li>

@@ -66,3 +66,8 @@ end
 
 gem 'bootstrap-sass'
 gem 'simple_form'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-angular'
+  gem 'rails-assets-angular-ui-router'
+end
