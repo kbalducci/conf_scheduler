@@ -18,13 +18,14 @@ What's working:
 * Comments on meetings
 * Meetings now associated with a room_id
 * Implemented DataTable with js for display of meetings
+* Time output with Moment.js
 
 
 
 Still working on:
 * More testing
 * Authorization
-* Updating time output with js
+
 
 
 
