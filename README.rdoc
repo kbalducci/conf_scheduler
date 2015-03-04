@@ -19,6 +19,7 @@ What's working:
 * Meetings now associated with a room_id
 * Implemented DataTable with js for display of meetings
 * Time output with Moment.js
+* Can now create a meeting from room show page.
 
 
 
