@@ -1107,11 +1107,27 @@
   "Cucumber Features": {
     "coverage": {
       "/Users/kbalducci/theironyard/week_7/thursday/conf_scheduler/features/step_definitions/create_meeting_steps.rb": [
-
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null
       ],
       "/Users/kbalducci/theironyard/week_7/thursday/conf_scheduler/features/step_definitions/shared_steps.rb": [
         1,
-        4,
+        5,
         null,
         null,
         1,
@@ -1131,7 +1147,7 @@
         null,
         null,
         1,
-        6,
+        7,
         null,
         null,
         null
@@ -1147,6 +1163,89 @@
         null,
         null,
         null,
+        null
+      ],
+      "/Users/kbalducci/theironyard/week_7/thursday/conf_scheduler/app/controllers/meetings_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/kbalducci/theironyard/week_7/thursday/conf_scheduler/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        9,
+        null,
+        null
+      ],
+      "/Users/kbalducci/theironyard/week_7/thursday/conf_scheduler/app/helpers/application_helper.rb": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        null,
+        null
+      ],
+      "/Users/kbalducci/theironyard/week_7/thursday/conf_scheduler/app/helpers/comments_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/kbalducci/theironyard/week_7/thursday/conf_scheduler/app/helpers/meetings_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/kbalducci/theironyard/week_7/thursday/conf_scheduler/app/helpers/rooms_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/kbalducci/theironyard/week_7/thursday/conf_scheduler/app/helpers/users_helper.rb": [
+        1,
         null
       ],
       "/Users/kbalducci/theironyard/week_7/thursday/conf_scheduler/app/controllers/rooms_controller.rb": [
@@ -1185,49 +1284,6 @@
         null,
         null
       ],
-      "/Users/kbalducci/theironyard/week_7/thursday/conf_scheduler/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        8,
-        null,
-        null
-      ],
-      "/Users/kbalducci/theironyard/week_7/thursday/conf_scheduler/app/helpers/application_helper.rb": [
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        0,
-        null,
-        null
-      ],
-      "/Users/kbalducci/theironyard/week_7/thursday/conf_scheduler/app/helpers/comments_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/kbalducci/theironyard/week_7/thursday/conf_scheduler/app/helpers/meetings_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/kbalducci/theironyard/week_7/thursday/conf_scheduler/app/helpers/rooms_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/kbalducci/theironyard/week_7/thursday/conf_scheduler/app/helpers/users_helper.rb": [
-        1,
-        null
-      ],
       "/Users/kbalducci/theironyard/week_7/thursday/conf_scheduler/app/controllers/welcome_controller.rb": [
         1,
         null,
@@ -1244,6 +1300,6 @@
         null
       ]
     },
-    "timestamp": 1425418934
+    "timestamp": 1425441585
   }
 }

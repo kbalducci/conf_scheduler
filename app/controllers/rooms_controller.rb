@@ -10,6 +10,7 @@ class RoomsController < ApplicationController
 
   def show
     @room = Room.find(params[:id])
+    #@meeting = @room.meetings.new
   end
 
   def create
@@ -28,7 +29,9 @@ class RoomsController < ApplicationController
 
   private
   def room_params
-    params.require(:room).permit(:room_name, :location, :description, :photo)
+    params.require(:room).permit(:room_name, :location, :description, :photo,
+                                 :meetings_attributes => [:user_id, :room_id, :start_time, :end_time, :title]
+                                 )
   end
 
 end

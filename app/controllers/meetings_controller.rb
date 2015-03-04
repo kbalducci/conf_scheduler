@@ -17,13 +17,12 @@ class MeetingsController < ApplicationController
 
   def create
     @meeting = Meeting.new(meeting_params)
-    user = current_user
-    @meeting.user_id = user.id
+    @meeting.user_id = current_user.id
+    @meeting.room_id = Room.find(params[:room_id]).id if params[:room_id]
     respond_to do |format|
       if @meeting.save
         NotificationMailer.new_meeting(@meeting).deliver
-        format.html { redirect_to user_meetings_path, notice: 'Meeting was successfully created.' }
-        format.json { render :show, status: :created, location: @meeting }
+        format.html { redirect_to room_path(@meeting.room_id), notice: 'Meeting was successfully created.' }
       else
         format.html { redirect_to root_path, notice: "Something went wrong" }
         format.json { render json: @meeting.errors, status: :unprocessable_entity }

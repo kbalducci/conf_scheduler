@@ -1,0 +1,19 @@
+<%= simple_form_for([@room, Meeting.new]) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <p>Start Time</p>
+    <%= f.datetime_select :start_time, label: "Start Time"%>
+    <br />
+    <br />
+    <p>End Time</p>
+    <%= f.datetime_select :end_time%>
+  </div>
+  <br />
+
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-primary" %>
+  </div>
+
+<% end %>
