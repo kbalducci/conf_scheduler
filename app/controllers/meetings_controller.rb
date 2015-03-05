@@ -19,9 +19,10 @@ class MeetingsController < ApplicationController
     @meeting = Meeting.new(meeting_params)
     @meeting.user_id = current_user.id
     @meeting.room_id = Room.find(params[:room_id]).id if params[:room_id]
+    @current_user.phone = current_user.phone
     respond_to do |format|
       if @meeting.save
-        Appointment.send_reminder_text_message("What: #{@meeting.title}
+        Meeting.send_text("What: #{@meeting.title}
                                                 When: #{@meeting.start_time}")
         NotificationMailer.new_meeting(@meeting).deliver
         format.html { redirect_to room_path(@meeting.room_id), notice: 'Meeting was successfully created.' }
