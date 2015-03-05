@@ -15,13 +15,13 @@ class Meeting < ActiveRecord::Base
     @auth_token = Figaro.env.auth_token
     @from_phone_number = "512-456-3275"
     @twilio_client = Twilio::REST::Client.new(@account_sid, @auth_token)
-    number_to_send_to = @current_user(params[:phone])
+
     # number_to_send_to = @current_user.phone
   end
 
-  def self.send_text(body)
+  def self.send_text(user, body)
     Meeting.establish_twilio
-    @twilio_client.messages.create(to: number_to_send_to,
+    @twilio_client.messages.create(to: "#{user.phone}",
                                   from: @from_phone_number,
                                   body: body)
   end

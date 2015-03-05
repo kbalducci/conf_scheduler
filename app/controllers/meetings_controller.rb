@@ -22,7 +22,7 @@ class MeetingsController < ApplicationController
     @current_user.phone = current_user.phone
     respond_to do |format|
       if @meeting.save
-        Meeting.send_text("What: #{@meeting.title}
+        Meeting.send_text(current_user, "What: #{@meeting.title}
                                                 When: #{@meeting.start_time}")
         NotificationMailer.new_meeting(@meeting).deliver
         format.html { redirect_to room_path(@meeting.room_id), notice: 'Meeting was successfully created.' }
