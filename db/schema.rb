@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150225045010) do
+ActiveRecord::Schema.define(version: 20150305060521) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
     t.text     "message"
-    t.integer  "user_id", null: false
+    t.integer  "user_id",    null: false
     t.integer  "meeting_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 20150225045010) do
     t.string   "title"
     t.datetime "start_time"
     t.datetime "end_time"
-    t.integer  "user_id", null: false
-    t.integer  "room_id", null: false
+    t.integer  "user_id",    null: false
+    t.integer  "room_id",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 20150225045010) do
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
+    t.string   "phone"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
