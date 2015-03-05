@@ -26,8 +26,10 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
+    # @meeting = Meeting.find(params[:meeting_id])
     @comment = Comment.new(comment_params)
     @comment.user_id = current_user.id
+    # @comment.meeting_id = @meeting_id
 
     respond_to do |format|
       if @comment.save
