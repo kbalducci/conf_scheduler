@@ -26,6 +26,8 @@ What's working:
 Still working on:
 * More testing
 * Authorization
+* Getting Twilio to work
+* Fixing DataTable js
 
 
 
