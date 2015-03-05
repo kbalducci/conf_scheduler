@@ -6,10 +6,10 @@
 
 
     var ready = function () {
-        timeFormatter();
-        $('#meetings-table').DataTable();
-        timeFormatter();
-        $('#comments-table').DataTable();
+        // timeFormatter();
+        // $('#meetings-table').DataTable();
+        // timeFormatter();
+        // $('#comments-table').DataTable();
     };
 
 
