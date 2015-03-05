@@ -8,7 +8,7 @@
         <li class="text-success">Date of Birth: <%= @user.dob %></li>
         <li class="text-success">Favorite Color: <%= @user.fav_color %></li>
       </ul>
-    <table class="table table-striped table-hover ">
+    <table id='meetings-table' class="table table-striped table-hover ">
       <thead>
         <tr>
           <th>Meeting</th>
@@ -21,8 +21,8 @@
         <tr>
 
           <td><%= meeting.title %></td>
-          <td><%= meeting.start_time %></td>
-          <td><%= meeting.end_time %></td>
+          <td><time><%= meeting.start_time %></time></td>
+          <td><time><%= meeting.end_time %></time></td>
           <% end %>
         </tr>
       </tbody>
