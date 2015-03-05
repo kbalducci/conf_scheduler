@@ -17,6 +17,7 @@ class CommentsController < ApplicationController
   # GET /comments/new
   def new
     @comment = Comment.new
+    @meeting = Meeting.find(params[:meeting_id])
   end
 
   # GET /comments/1/edit
@@ -26,14 +27,14 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
-    # @meeting = Meeting.find(params[:meeting_id])
+    @meeting = Meeting.find(params[:meeting_id])
     @comment = Comment.new(comment_params)
     @comment.user_id = current_user.id
-    # @comment.meeting_id = @meeting_id
+    @comment.meeting_id = @meeting.id
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
+        format.html { redirect_to room_path(@meeting.room), notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new }

@@ -44,7 +44,7 @@
       <td><time><%= meeting.start_time %></time></td>
       <td><time><%= meeting.end_time %></time></td>
       <td><%= meeting.user.full_name %></td>
-      <td><%= link_to('Leave a Comment', new_comment_path, class: "btn btn-primary btn-sm") %></td>
+      <td><%= link_to('Leave a Comment', new_room_meeting_comment_path(meeting.room, meeting), class: "btn btn-primary btn-sm") %></td>
     </tr>
   <% end %>
   </tbody>

@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
-  resources :comments
 
   devise_for :users
   resources :users do
     resources :meetings
   end
   resources :rooms do
-    resources :meetings
+    resources :meetings do
+      resources :comments
+    end
   end
 
   root 'welcome#index'
