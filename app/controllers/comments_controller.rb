@@ -35,10 +35,10 @@ class CommentsController < ApplicationController
     respond_to do |format|
       if @comment.save
         format.html { redirect_to room_path(@meeting.room), notice: 'Comment was successfully created.' }
-        format.json { render :show, status: :created, location: @comment }
+        # format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
+        # format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
   end
