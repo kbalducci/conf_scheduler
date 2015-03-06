@@ -14,6 +14,7 @@
           <th>Meeting</th>
           <th>Start Time</th>
           <th>End Time</th>
+        <!--   <th>Comment</th> -->
         </tr>
       </thead>
       <tbody>
@@ -23,6 +24,7 @@
           <td><%= meeting.title %></td>
           <td><time><%= meeting.start_time %></time></td>
           <td><time><%= meeting.end_time %></time></td>
+         <!-- meeting.comment.message -->
           <% end %>
         </tr>
       </tbody>

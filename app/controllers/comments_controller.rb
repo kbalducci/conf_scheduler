@@ -34,7 +34,8 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to room_path(@meeting.room), notice: 'Comment was successfully created.' }
+        format.html { redirect_to user_path(@meeting.user), notice: 'Comment was successfully created.' }
+        # format.html { redirect_to room_path(@meeting.room), notice: 'Comment was successfully created.' }
         # format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new }
