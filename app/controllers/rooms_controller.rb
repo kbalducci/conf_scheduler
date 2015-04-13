@@ -10,6 +10,8 @@ class RoomsController < ApplicationController
 
   def show
     @room = Room.find(params[:id])
+    # @meeting = Meeting.find(params[:id])
+    # @comment.meeting_id = @meeting.id
     # user = User.find(params[user.id])
     #@meeting = @room.meetings.new
   end
